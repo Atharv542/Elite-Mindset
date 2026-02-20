@@ -7,13 +7,13 @@ const founders = [
     name: "Jazz Ferguson",
     role: "NBA Basketball Player",
     bio: "Jazz Ferguson, a successful professional basketball player with 15 years elite experience across four continents.",
-    image: "Screenshot 2026-02-20 112733.png",
+    image: "https://res.cloudinary.com/dczt652u9/image/upload/v1771571986/Screenshot_2026-02-20_112733_gu4wfc.png",
   },
   {
     name: "Mark Colbourne MBE",
     role: "Paralympic Cycling Champion",
     bio: "Mark Colbourne MBE, former world and paralympic gold medalist from the London 2012 Paralympic games.",
-    image: "/Screenshot 2026-02-19 233622.png",
+    image: "https://res.cloudinary.com/dczt652u9/image/upload/v1771571985/Screenshot_2026-02-19_233622_ofexjq.png",
   },
 ];
 
