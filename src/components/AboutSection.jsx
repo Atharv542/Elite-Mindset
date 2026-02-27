@@ -13,7 +13,7 @@ const founders = [
   {
     name: "Mark Colbourne MBE",
     role: "Paralympic Cycling Champion",
-    bio: "A Former World and Paralympic Gold Medalist from the London 2012 Paralympic Games.",
+    bio: "Former World and Paralympic Gold Medalist from the London 2012 Paralympic Games.",
     image: Mark,
   },
 ];

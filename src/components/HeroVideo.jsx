@@ -1,23 +1,7 @@
 import { motion } from "framer-motion";
-import { useRef, useState, useEffect } from "react";
-import introVideo from "../assets/intro-video1.mp4";
 import heroBg from "../assets/hero-bg.png";
 
 export default function HeroSection() {
-  const videoRef = useRef(null);
-  const [showVideo, setShowVideo] = useState(false);
-
-  // ⏳ Delay video start
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowVideo(true);
-      if (videoRef.current) {
-        videoRef.current.play();
-      }
-    }, 2500);
-
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
@@ -31,20 +15,6 @@ export default function HeroSection() {
         transition={{ duration: 1.5, ease: "easeOut" }}
         className="absolute inset-0 w-full h-full object-cover"
       />
-
-      {/* Video fades in after delay */}
-      <motion.video
-        ref={videoRef}
-        muted
-        loop
-        playsInline
-        initial={{ opacity: 0 }}
-        animate={{ opacity: showVideo ? 1 : 0 }}
-        transition={{ duration: 1.5 }}
-        className="absolute inset-0 w-full h-full object-cover"
-      >
-        <source src={introVideo} type="video/mp4" />
-      </motion.video>
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
@@ -76,9 +46,9 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1.3 }}
-            className="text-lg md:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed"
+            className="text-lg md:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed"
           >
-            Master the mindset, resilience, and skills to achieve extraordinary results
+            Master your mindset, resilience, and skills to achieve extraordinary results
           </motion.p>
 
           {/* Button */}
@@ -112,6 +82,7 @@ export default function HeroSection() {
               Explore Workshops
             </motion.button>
           </motion.div>
+
         </div>
       </div>
 
